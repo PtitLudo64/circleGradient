@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "netflix";
+    src: url(./bebas-neue/BebasNeue.otf);
+}
 :root {
     --light-blue: rgb(32, 18, 95);
     --dark-blue: rgb(204, 100, 223);
@@ -10,6 +14,8 @@
             var(--violet),
             var(--light-blue),
             var(--dark-blue));
+
+    --txt-red: #DB202C;
 }
 
 body {
@@ -73,17 +79,51 @@ body {
     }
 }
 @keyframes pulse {
-
-    
     20%,
     40%,
     80%
     {
         transform: scale(1);
     }
-
     10%,
     60% {
         transform: scale(1.1);
     }
+}
+
+/* Container */
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+}
+#container svg {
+    position: absolute;
+    height: 0;
+}
+#container .reflection h1 {
+    font-family: "netflix";
+    font-size: clamp(5vw, 3rem, 15vw);
+    color: var(--txt-red);
+    z-index: 3;
+}
+.reflection {
+    aspect-ratio: 16/9;
+    display: inline-flex;
+    flex-direction: column;
+}
+.reflexion > * {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.clone {
+    filter: url(#wavy);
+    transform: rotate(180deg) scaleX(-1) scaley(0.80) translateY(100%) translateX(-2%);
+    opacity: 0.8;
+    z-index: 3;
+    /* transform-origin: left bottom; */
 }
