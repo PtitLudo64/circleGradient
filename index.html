@@ -20,12 +20,12 @@
                 <feTurbulence id="turbulence" type="turbulence" numOctaves="1" result="NOISE"></feTurbulence>
                 <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="50"></feDisplacementMap>
                 <animate xlink:href="#turbulence" attributeName="baseFrequency" dur="20s" keyTimes="0;0.5;1"
-                    values="0.01 0.02;0.02 0.03;0.01 0.02" repeatCount="indefinite"></animate>
+                    values="0.01 0.001;0.02 0.02;0.01 0.001" repeatCount="indefinite" animation-direction="reverse"></animate>
             </filter>
         </svg>
         <div class="reflection">
-            <h1>Hello world!</h1>
-            <h1 class="clone">Hello world!</h1>
+            <h1>Hello world !</h1>
+            <h1 class="clone">Hello world !</h1>
         </div>
         
     </div>
